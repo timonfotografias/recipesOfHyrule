@@ -1,0 +1,297 @@
+/*
+Theme Name: Recetas de Hyrule
+Version: 1.3
+Description: Tema personalizado para la asignatura de WEB AVANZADA
+Author: Rubén Alvarado Rodríguez
+*/
+
+
+html{
+    margin-top: 0 !important;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+.menu{
+    display: flex;
+    align-content: center;
+    min-height: 10vh;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+header{
+    position: relative;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.avisobajar{
+    display: block;
+    align-self: flex-end;
+    text-align: center;
+    text-decoration: underline;
+    position: relative;
+    animation-name: saltos;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes saltos {
+    0%{top:0px}
+    40%{top:0px}
+    100%{top:-10px}
+}
+
+
+.listainline li{
+    display: inline;
+    list-style: none;
+    font-size: larger;
+}
+.listainline li:not(:last-child){
+    margin-right: 1em;
+}
+.listainline{
+    padding-left: 1em;
+}
+.menu ul{
+    margin: 30px;
+    float: right;
+}
+.titular{
+    position: relative;
+    left: 50px;
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+.titular h1{
+    height: max-content;
+    width: 50%;
+    font-size: 6em;
+    color: rgb(66, 66, 66);
+}
+.card{
+    margin: 20px;
+}
+footer{
+    border-radius: 8px 8px 0px 0px;
+    color: white;
+    padding: 1em;
+    background-color: #424242;
+}
+.material-icons-outlined{
+    font-size: 2em;
+    margin-left: 0.3em;
+    float: right;
+}
+footer ul{
+    font-size: small;
+}
+.navbar-light .navbar-toggler{
+    border: 0;
+}
+nav{
+    float: right;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    color: #a7a7a7;
+}
+.avisobajar a{
+    color: #424242;
+}
+.nav-link{
+    font-size: x-large;
+}
+#texto-tarjeta{
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em; 
+    color: #424242;
+    text-decoration: underline;  
+    background: #ffffffb0;
+    padding: 0.3em;
+}
+
+
+.lista-recetas{
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.categoria_ingredientes{
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+.card-img-top{
+    height: 270px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+.card-body *{
+    display: inline;
+}
+.card-title{
+    font-size: large;
+    font-weight: bold;
+}
+.card-btn{
+    float: right;
+}
+.ingrediente:hover .nombreingrediente{
+    opacity: 1;
+}
+.nombreingrediente{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(119, 119, 85, 0.445);
+}
+.ingrediente{
+    position: relative;
+    margin: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.ingrediente img{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: azure;
+}
+.enlaceingrediente *{
+    color: white;
+}
+.nombreingrediente h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(119, 119, 85);
+    padding: 5px;
+}
+.listaingredientes{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+    margin-bottom: 2em;
+}
+
+
+article{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+article h1{
+    margin-bottom: 0.5em;
+}
+
+/*Recetas*/
+.foto_receta{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.titulo_post_receta p{
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 2px 5px;
+    max-width: max-content;
+    margin-bottom: 0;
+}
+.etiqueta{
+    position: relative;
+    background-color: #424242;
+    color: white;
+    padding: 2px;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+.etiqueta:hover{
+    color: white;
+    cursor: pointer;
+    top: -2px;
+    background-color: #313131;
+}
+.etiqueta:active{
+    top: 1px;
+    text-decoration: underline;
+}
+.contenido_post_receta{
+    margin-top: 20px;
+}
+.imagenReceta{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width: 768px){
+    .titular h1{
+        font-size: 4em;
+    }
+}
+@media (max-width: 576px){
+    .titular h1{
+        width: 90%;
+        font-size: 4em;
+    }
+}
+@media (max-width: 768px) {
+    
+    .lista-recetas{
+        grid-template-columns: auto;
+    }
+    .listaingredientes{
+        grid-template-columns: 50% 50%;
+    }
+    
+}
+@media (max-width: 576px) {
+    .material-icons-outlined{
+        float: none;
+    }
+    .listaingredientes{
+        grid-template-columns: auto;
+    }
+}
+@media (max-width: 991px) {
+    nav{
+        float: left;
+    }
+}
